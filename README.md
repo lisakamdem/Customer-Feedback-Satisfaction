@@ -56,8 +56,8 @@ Summary statistics: average purchase frequency 10.45, average product quality 5.
 ## Repository Contents
 
 - `README.md`: Customer Feedback Satisfaction
-- `report/`: PDF of pivot tables and the Word document of findings and recommendations
-- `data/`: exported copy of the working sheet (.xlsx or .pdf)
+- PDF of pivot tables and the Word document of findings and recommendations
+- exported copy of the working sheet (.xlsx)
 
 ## Tools
 
