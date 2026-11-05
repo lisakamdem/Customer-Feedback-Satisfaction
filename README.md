@@ -31,6 +31,7 @@ The dataset contains over **38,000 customer records**, capturing feedback on pro
 ## Tools Used
 
 - **Google Sheets:** Used for data exploration, analysis, and visualization.
+- **Google Docs:**  Used for detailing my findings and Business Recommendation
 
 ## Repository Contents
 
