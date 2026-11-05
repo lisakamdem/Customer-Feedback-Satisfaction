@@ -1,47 +1,64 @@
-# Customer-Feedback-Satisfaction
+# Customer Feedback & Satisfaction Analysis
 
-## Project Overview
+Analysis of 38,444 customer records in Google Sheets to find out what drives customer satisfaction and whether loyalty tier or purchase frequency matter.
 
-Customer satisfaction is a critical factor in building and maintaining a successful business. Customer feedback and satisfaction scores provide valuable insights into how well a company meets customer expectations. Analyzing this information helps identify areas of strength, highlight opportunities for improvement, and support better business decisions.
+**Headline result:** perceived product and service quality are the only factors tied to satisfaction. Loyalty tier and purchase frequency show no meaningful relationship with it.
 
-## Problem Statement and Project Objectives
+## Key Findings
 
-The objective of this project is to analyze customer feedback and satisfaction metrics to identify which aspects of a company's products and services are performing well and which areas require improvement.
+- **Quality drives satisfaction.** The share of highly satisfied customers (score 76-100) rises from **37.5%** among customers who rated product quality 1 to **97.7%** among those who rated it 10. Service quality shows the same pattern (**36.3% to 97.8%**). Correlation with satisfaction score is moderate for both (product r = 0.548, service r = 0.554).
+- **Low ratings are the biggest opportunity.** About 40% of customers rate product quality 1-4, and about 40% rate service quality 1-4. Only around 20% rate either at 9-10.
+- **Loyalty tier does not predict satisfaction.** The share of highly satisfied customers is 74.0% (Bronze), 73.8% (Silver), and 73.4% (Gold).
+- **Loyalty tiers rate quality similarly.** Roughly 20% of each tier rates product and service quality 9-10, so top ratings are not concentrated in any one segment.
+- **Purchase frequency shows no clear link** to loyalty tier or to feedback category (Low/Medium/High). Each group splits roughly evenly.
 
-Using **Google Sheets**, I created visualizations to explore different levels of customer satisfaction and evaluate overall customer experiences.
+## Business Recommendations
 
-The analysis also examines customer loyalty levels to better understand customer behavior, engagement, and perceptions of the products and services offered.
+1. **Prioritize the lowest-rated products and services.** Customers rating quality 1-4 make up about 40% of the base, and only 36-46% of them are highly satisfied, compared with 90%+ of those rating 7 or higher. Identify which products and service touchpoints receive the lowest ratings and fix those first.
+2. **Don't rely on loyalty tier as a proxy for satisfaction.** Gold customers are no more satisfied than Bronze, so tier-based perks alone are unlikely to move satisfaction.
+3. **Look beyond purchase frequency.** It did not explain feedback or loyalty differences. Factors such as price, convenience, and product availability would need additional data.
 
-Through this project, I aim to identify meaningful trends in customer feedback and translate the findings into actionable insights that could help improve customer satisfaction and business performance.
-
-## Data Source
-
-The dataset used in this project was provided by **Jahnavi Paliwal** and made publicly available through Kaggle.
-
-The dataset contains over **38,000 customer records**, capturing feedback on products and services in a structured format. It provides various customer feedback and satisfaction metrics that can be used to evaluate customer experiences and identify potential areas for improvement.
-
-### Source Information
+## Dataset
 
 - **Dataset:** Customer Feedback and Satisfaction
-- **Author:** Jahnavi Paliwal
-- **Published:** 2024
-- **Platform:** [Kaggle](<https://www.kaggle.com/>)
-- **License:** Apache 2.0
+- **Author:** Jahnavi Paliwal (Kaggle, 2024)
+- **Link:** https://www.kaggle.com/datasets/jahnavipaliwal/customer-feedback-and-satisfaction
+- **License:** Apache 2.0 
+- **Size:** 38,444 customer records
 
-## Tools Used
+Key fields: CustomerID, Age, LoyaltyLevel (Bronze/Silver/Gold), PurchaseFrequency, ProductQuality (1-10), ServiceQuality (1-10), FeedbackScore (Low/Medium/High), and SatisfactionScore.
 
-- **Google Sheets:** Used for data exploration, analysis, and visualization.
-- **Google Docs:**  Used for detailing my findings and Business Recommendation
+Summary statistics: average purchase frequency 10.45, average product quality 5.49, average service quality 5.49, average satisfaction score 85.28 (range 4-100).
+
+**Note on the data:** the distributions are almost perfectly uniform (loyalty tiers about 33% each, feedback categories about 33% each, purchase frequency groups about 25% each), which suggests the dataset is synthetic. This explains why several variables show no relationship, and the findings should be read as an exercise in method rather than conclusions about a real business.
+
+## Method
+
+1. Loaded the dataset into Google Sheets. 
+
+	- Removed duplicates
+	- Round up to the nearest satisfaction score
+	- Finding the average of Product Quality and Purchase Frequency
+	- Doing a Purchase Frequency group (1-5, 6-10, 11-15, 16-20)
+
+
+2. Built pivot tables showing each group as a percentage of customers (count of CustomerID).
+3. Compared distributions across quality ratings, loyalty tiers, and purchase frequency groups, and calculated correlations between quality ratings and satisfaction score.
+4. Charted the key comparisons and wrote up findings and recommendations.
+
+## Limitations
+
+- The data appears synthetic, so results may not reflect real customer behavior.
+- Correlation does not imply causation: quality ratings are associated with satisfaction, but this analysis cannot show that improving quality would raise it.
+- Quality ratings explain only part of satisfaction (r of about 0.55, or roughly 30% of the variation), so other drivers are not captured in this dataset.
+- Similarity across groups was assessed by comparing percentages, not with formal statistical tests.
 
 ## Repository Contents
 
-This repository includes the following project deliverables:
+- `README.md`: Customer Feedback Satisfaction
+- `report/`: PDF of pivot tables and the Word document of findings and recommendations
+- `data/`: exported copy of the working sheet (.xlsx or .pdf)
 
-- **PDF Report:** A collection of graphs and visualizations created during the analysis.
-- **Word Document:** A summary of the key findings, insights, and observations from the customer satisfaction analysis.
+## Tools
 
-## Key Takeaway
-
-This project demonstrates how customer feedback and satisfaction metrics can be used to better understand customer experiences, assess loyalty, and identify opportunities for business improvement.
-
-By transforming raw customer feedback into visual insights, businesses can make more informed decisions focused on improving their products, services, and overall customer satisfaction.
+Google Sheets (analysis, pivot tables, charts) and Google Docs (written findings).
