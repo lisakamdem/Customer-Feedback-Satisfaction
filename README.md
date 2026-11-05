@@ -2,7 +2,7 @@
 
 Analysis of 38,444 customer records in Google Sheets to find out what drives customer satisfaction and whether loyalty tier or purchase frequency matter.
 
-**Headline result:** perceived product and service quality are the of the factors tested tied to satisfaction. Loyalty tier and purchase frequency show no meaningful relationship with it.
+**Headline result:** of the factors tested, perceived product and service quality are the only ones tied to satisfaction. Loyalty tier and purchase frequency show no meaningful relationship with it.
 
 ## Key Findings
 
@@ -37,12 +37,16 @@ Summary statistics: average purchase frequency 10.45, average product quality 5.
 1. Loaded the dataset into Google Sheets. 
 
 	- Removed duplicates
-	- Rounded to the nearest whole number
-	- Finding the average of Product Quality and Purchase Frequency
+	- Rounded satisfaction scores to the nearest whole number
+     (SatisfactionScore_Round)
+	- Calculated summary statistics (averages and correlations).
 	- Doing a Purchase Frequency group (1-5, 6-10, 11-15, 16-20)
 
-
-2. Built pivot tables showing each group as a percentage of customers (count of CustomerID).
+2. Built pivot tables showing each group as a percentage of customers (count of CustomerID). Values were grouped directly in the pivot tables.
+   - Satisfaction score: 1-25, 26-50, 51-75, 76-100
+   - Quality ratings (loyalty tables): 1-4, 5-8, 9-10
+   - Age: 10-year bands (18-27 through 68-77)
+  
 3. Compared distributions across quality ratings, loyalty tiers, and purchase frequency groups, and calculated correlations between quality ratings and satisfaction score.
 4. Charted the key comparisons and wrote up findings and recommendations.
 
@@ -55,7 +59,7 @@ Summary statistics: average purchase frequency 10.45, average product quality 5.
 
 ## Repository Contents
 
-- `README.md`: Customer Feedback Satisfaction
+- `README.md`: Project Summary
 - PDF of pivot tables and the Word document of findings and recommendations
 - exported copy of the working sheet (.xlsx)
 
