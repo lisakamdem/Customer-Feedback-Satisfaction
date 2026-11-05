@@ -37,7 +37,7 @@ Summary statistics: average purchase frequency 10.45, average product quality 5.
 1. Loaded the dataset into Google Sheets. 
 
 	- Removed duplicates
-	- Round up to the nearest satisfaction score
+	- Rounded to the nearest whole number
 	- Finding the average of Product Quality and Purchase Frequency
 	- Doing a Purchase Frequency group (1-5, 6-10, 11-15, 16-20)
 
