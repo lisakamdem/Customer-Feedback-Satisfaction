@@ -37,7 +37,7 @@ The dataset contains over **38,000 customer records**, capturing feedback on pro
 This repository includes the following project deliverables:
 
 - **PDF Report:** A collection of graphs and visualizations created during the analysis.
-- **Document:** A summary of the key findings, insights, and observations from the customer satisfaction analysis.
+- **Word Document:** A summary of the key findings, insights, and observations from the customer satisfaction analysis.
 
 ## Key Takeaway
 
