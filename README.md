@@ -2,7 +2,7 @@
 
 Analysis of 38,444 customer records in Google Sheets to find out what drives customer satisfaction and whether loyalty tier or purchase frequency matter.
 
-**Headline result:** perceived product and service quality are the only factors tied to satisfaction. Loyalty tier and purchase frequency show no meaningful relationship with it.
+**Headline result:** perceived product and service quality are the of the factors tested tied to satisfaction. Loyalty tier and purchase frequency show no meaningful relationship with it.
 
 ## Key Findings
 
