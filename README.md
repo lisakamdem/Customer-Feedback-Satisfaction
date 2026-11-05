@@ -14,7 +14,7 @@ Analysis of 38,444 customer records in Google Sheets to find out what drives cus
 
 ## Business Recommendations
 
-1. **Prioritize the lowest-rated products and services.** Customers rating quality 1-4 make up about 40% of the base, and only 36-46% of them are highly satisfied, compared with 90%+ of those rating 7 or higher. Identify which products and service touchpoints receive the lowest ratings and fix those first.
+1. **Prioritize the lowest-rated products and services.** Customers rating quality 1-4 make up about 40% of the base, and only 37-65% of them are highly satisfied, compared with 88%+ of those rating 7 or higher.
 2. **Don't rely on loyalty tier as a proxy for satisfaction.** Gold customers are no more satisfied than Bronze, so tier-based perks alone are unlikely to move satisfaction.
 3. **Look beyond purchase frequency.** It did not explain feedback or loyalty differences. Factors such as price, convenience, and product availability would need additional data.
 
